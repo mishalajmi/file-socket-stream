@@ -14,6 +14,6 @@ args = parser.parse_args()
 
 
 if __name__ == '__main__':
-    print(f"Running in {args.mode} mode...ip: {args.ip}...port: {args.port}...num of threads: {args.threads}")
-    serv = Server(args.ip,args.port,args.mode,args.threads,args.file)
-    serv.get_filepath()
+    print(f"Running in {args.mode[0]} mode...ip: {args.ip[0]}...port: {args.port[0]}...num of threads: {args.threads[0]}")
+    server = Server(args.ip,args.port,args.mode,args.threads,args.file[0])
+    server.count_files_dir(server.get_full_path())
