@@ -28,8 +28,7 @@ class Client:
         @retrun full path as string
         """
         try:
-            full_path = os.path.abspath(self.FILENAME)
-            return full_path
+            return os.path.abspath(self.FILENAME)
         except Exception as e:
             raise SystemExit(f"Could not complete operation: {e}")
     
